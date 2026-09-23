@@ -1,0 +1,58 @@
+{
+  "language": "ms",
+  "built": "2026-09-23",
+  "candidates": 7921,
+  "shipped": 3727,
+  "ships": "pending",
+  "decided": null,
+  "why": null,
+  "license": null,
+  "conforms": true,
+  "families": 6,
+  "checkable": 5,
+  "knee": null,
+  "steps": [
+    {
+      "families": 1,
+      "added": "wikimedia",
+      "kept": 0,
+      "share": 0,
+      "gained": 0
+    },
+    {
+      "families": 2,
+      "added": "leipzig",
+      "kept": 0,
+      "share": 0,
+      "gained": 0
+    },
+    {
+      "families": 3,
+      "added": "utusan.com.my",
+      "kept": 2487,
+      "share": 0.313976,
+      "gained": 2487
+    },
+    {
+      "families": 4,
+      "added": "tatoeba",
+      "kept": 3204,
+      "share": 0.404494,
+      "gained": 717
+    },
+    {
+      "families": 5,
+      "added": "ebible",
+      "kept": 3595,
+      "share": 0.453857,
+      "gained": 391
+    },
+    {
+      "families": 6,
+      "added": "kosmo.com.my",
+      "kept": 3727,
+      "share": 0.470521,
+      "gained": 132
+    }
+  ]
+}
