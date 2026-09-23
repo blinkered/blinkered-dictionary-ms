@@ -1,0 +1,110 @@
+# Blinkered dictionary: Malay
+
+The Malay word list, and the evidence for every word in it.
+
+Built by [`blinkered-attestation`](https://github.com/blinkered/blinkered-attestation). The rule,
+the evidence format and the reasoning live there; what lives here is Malay.
+
+**3,727 of 7,921 candidates proved, 47.1%**, across 6 independent
+families, 5 of which a stranger could check by fetching.
+
+## What is in this repository
+
+```
+sources.mjs        which collections attest Malay, and why those
+ATTESTATIONS.tsv   the evidence: every candidate, what saw it, and where
+words.txt          what survived, in Blinkered's own format
+dropped.tsv        what did not, and how close it came
+searched.tsv       publishers fetched directly: per page, which candidates it held and how often
+SATURATION.md      what each family was worth, measured from the evidence
+COLLECTIONS.md     every collection read, and where to get it again
+status.json        the numbers, whether this ships, and what the list is under
+```
+
+`.cache/` holds the downloaded collections and is not tracked. Everything here is regenerable
+with `pnpm build`.
+
+## Where the words come from
+
+Candidates come from Blinkered's Malay list, which lives in
+[`blinkered-attestation/candidates/ms`](https://github.com/blinkered/blinkered-attestation/tree/main/candidates/ms).
+The dictionaries that built it are demoted to **proposing words worth looking up**. What earns a
+word its place here is evidence that it occurs in the world: three independent collections, each
+recorded with a locator somebody else can fetch.
+
+`SATURATION.md` says what each family was worth. `COLLECTIONS.md` names every collection read and
+where to get it again, which is what makes the downloads disposable.
+
+## What is particular to Malay
+
+**The families.** Malay Wikipedia and Wikisource (one Wikimedia family), four Leipzig packages
+(2019 news, news crawls from 2011 and 2016, and the 2013 web crawl restricted to Malaysia, one
+family between them), Tatoeba, the Malaysian New Testament on eBible, and Malaysian publishers
+fetched directly (`utusan.com.my` and `kosmo.com.my` so far). The Internet Archive is read and
+contributes nothing, for the reason below.
+
+**Indonesian is the same language, so no floor can catch it.** Of the shared words, 85% of this
+list is also in the Indonesian list, and the top of the list is identical in both (YANG, DAN, ITU,
+TIDAK). What distinguishes Malay are words like AKAUN, BASIKAL, ANTARABANGSA and BANDARAYA, and
+those are exactly the words an Indonesian source cannot attest. So every source leans Malaysian
+where there is a choice.
+
+**What the Archive calls Malay is mostly not.** Of its first 56 texts, 47 were English, Urdu or
+Arabic works mistagged, stopped by the legibility floor. Of the eight that passed, seven were
+Indonesian (Hamka's _Tafsir al-Azhar_, Indonesian translations of al-Ghazali) and one was a
+Palembang glossary. `sources.mjs` therefore reads a book as empty when five Indonesian spellings
+(KARENA, BISA, UANG, KANTOR, SAJA) outnumber their Malaysian counterparts (KERANA, BOLEH, WANG,
+PEJABAT, SAHAJA) by more than two to one, and leaves out anything named as a dictionary, kamus,
+vocabulary or glossary. With both rules in place the shelf attests nothing. Before them it was the
+strongest family after Wikipedia and Leipzig, which is the measure of how much Indonesian it was
+carrying.
+
+**Where the drop list points.** 2,315 of the 2,352 words one family short are attested by
+Wikipedia and Leipzig and nothing else: ABADIKAN, ABAH. They need one more Malaysian voice, which
+is what the publisher harvest is for; it was still running when this was built, so a rebuild will
+reuse everything recorded here and add what it finds.
+
+**Tiles.** Q and X spell no shipped word. Each has a handful of candidates (QASIDAH, MUSAHAQAH;
+XENON, XILOFON, XENOFOBIA, XDE) and every one was dropped one or two families short, so this is
+thin evidence rather than a fold bug. 5.7% of the list is also in the English one, mostly loans
+(POLIS, UNIT, PROGRAM).
+
+## Rebuilding
+
+```
+pnpm install
+pnpm build        # reads whatever collections are in .cache/raw, reuses the record for the rest
+pnpm conform      # the list says only what the evidence supports
+pnpm saturation   # recomputes the curve and status.json
+```
+
+A collection that is not on disk is skipped with a warning and its recorded testimony is reused,
+so a rebuild after more books arrive is short rather than a re-read of everything.
+
+## Before this ships
+
+`COMMON_CUT` in `sources.mjs` is carried over from Blinkered's old calibration against a
+differently sized list. It has to be re-measured before this list reaches the game, and
+`status.json` says `"ships": "pending"` until somebody decides otherwise. Nobody has yet played
+the boards this list deals.
+
+## Licensing
+
+Three kinds of thing live here and they do not share terms. The distinction is the project: a
+licence that claimed more than we can support would undo the argument the evidence is here to
+make. [NOTICE](NOTICE) is the authority; this is the summary.
+
+| | terms | what |
+| --- | --- | --- |
+| **Code and docs** | [Apache-2.0](LICENSE) | `build.mjs`, `sources.mjs`, `harvest.mjs`, `conform.mjs`, `saturation.mjs`, and the Markdown |
+| **The list and its evidence** | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) | `words.txt`, the evidence, `status.json`, `SATURATION.md`, `COLLECTIONS.md`, `searched.tsv` |
+| **The words we could not prove** | `CC-BY-SA-4.0` | `dropped.tsv`, which is **not ours to license** |
+
+**Why the list is CC0.** A word ships because three independent collections of text were found to
+contain it. The record of which collections, and where in them, is a statement of fact about those
+texts rather than a copy of them, and nothing a licence governs was taken from the dictionary that
+proposed the candidates.
+
+**Why `dropped.tsv` is not.** It is the candidates that failed, and a candidate that failed is a
+word we have nothing to say about except that somebody's dictionary proposed it. That makes the
+file a subset of that dictionary and it carries that dictionary's terms, here `CC-BY-SA-4.0`.
