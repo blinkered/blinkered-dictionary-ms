@@ -8,9 +8,9 @@ the curve a careful builder would get, not the order this repository happens to 
 The first two families keep nothing, which is not padding — it is the shape of a rule that needs
 three independent sources.
 
-Candidates: 7,921. Shipped: 3,727.
+Candidates: 7,921. Shipped: 5,048.
 
-Of 6 families, **5 can be checked by fetching** —
+Of 10 families, **9 can be checked by fetching** —
 a stable identifier or a page we fetched ourselves. The other 1 are crawls
 somebody else made, whose locators record where they found the sentence; the document that holds
 it is their published corpus, not the web.
@@ -19,9 +19,13 @@ it is their published corpus, not the web.
 | --- | --- | --- | --- | --- |
 | 1 | `wikimedia` | 0 | 0.0% | — |
 | 2 | `leipzig` | 0 | 0.0% | — |
-| 3 | `utusan.com.my` | 2,487 | 31.4% | +2,487 |
-| 4 | `tatoeba` | 3,204 | 40.4% | +717 |
-| 5 | `ebible` | 3,595 | 45.4% | +391 |
-| 6 | `kosmo.com.my` | 3,727 | 47.1% | +132 |
+| 3 | `internetarchive` | 4,470 | 56.4% | +4,470 |
+| 4 | `kosmo.com.my` | 4,791 | 60.5% | +321 |
+| 5 | `utusan.com.my` | 4,883 | 61.6% | +92 |
+| 6 | `tatoeba` | 4,948 | 62.5% | +65 |
+| 7 | `ebible` | 4,991 | 63.0% | +43 |
+| 8 | `sinarharian.com.my` | 5,022 | 63.4% | +31 |
+| 9 | `astroawani.com` | 5,048 | 63.7% | +26 |
+| 10 | `hmetro.com.my` | 5,048 | 63.7% | — |
 
-No family after the third fell below a twentieth of the best single gain: this language was still being paid for every source it consulted.
+**Diminishing returns from family 5** (`utusan.com.my`, +92), where a family first added less than a twentieth of what the best one did.

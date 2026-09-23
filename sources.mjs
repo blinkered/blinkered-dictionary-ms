@@ -132,6 +132,9 @@ const ALL = [
     // a median 52% known words and never below 36%; the worst of these scored 1%, an English
     // book read as Cyrillic. Below this floor a book is not legible enough to attest anything.
     legible: 0.35,
+    // Two passes filled this shelf: the broad query below, most-downloaded first, which turned out
+    // to be mostly Indonesian and mistagged, then the same query narrowed to items that mention
+    // Malaysia, Kuala or Melayu, which is where the Malaysian books were.
     what: 'Internet Archive Malay books — literature, and the register a newspaper never reaches',
     needs: `${CACHE}archive-ms`,
     from: 'https://archive.org/search?query=mediatype%3Atexts+AND+%28language%3A%22Malay%22+OR+language%3A%22may%22+OR+language%3A%22msa%22+OR+language%3A%22zsm%22%29',

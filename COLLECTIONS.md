@@ -12,17 +12,20 @@ collection rather than reuse its record only has to put the file back where the 
 
 | collection | tokens | what it is | where it came from |
 | --- | ---: | --- | --- |
-| `wiki:ms` | 97,505,005 | Malay Wikipedia — modern encyclopedic prose | [mswiki.xml.bz2](https://dumps.wikimedia.org/mswiki/latest/mswiki-latest-pages-articles.xml.bz2) |
-| `lz:msa-my_web_2013_1M` | 3,129,321 | Leipzig msa-my_web_2013_1M — modern news and web text, cited by the page each sentence came from | [msa-my_web_2013_1M](https://downloads.wortschatz-leipzig.de/corpora/msa-my_web_2013_1M.tar.gz) |
-| `lz:msa_newscrawl_2016_300K` | 443,046 | Leipzig msa_newscrawl_2016_300K — modern news and web text, cited by the page each sentence came from | [msa_newscrawl_2016_300K](https://downloads.wortschatz-leipzig.de/corpora/msa_newscrawl_2016_300K.tar.gz) |
-| `wikisource:ms` | 191,932 | Malay Wikisource — same Wikimedia family, so it corroborates rather than counts | [mswikisource.xml.bz2](https://dumps.wikimedia.org/mswikisource/latest/mswikisource-latest-pages-articles.xml.bz2) |
-| `ebible:zlmKSZI` | 152,053 | eBible zlmKSZI — a family nothing else here belongs to | [zlmKSZI_vpl.txt](https://ebible.org/Scriptures/zlmKSZI_vpl.zip) |
-| `lz:msa_newscrawl_2011_100K` | 143,099 | Leipzig msa_newscrawl_2011_100K — modern news and web text, cited by the page each sentence came from | [msa_newscrawl_2011_100K](https://downloads.wortschatz-leipzig.de/corpora/msa_newscrawl_2011_100K.tar.gz) |
-| `lz:msa_news_2019_100K` | 88,062 | Leipzig msa_news_2019_100K — modern news and web text, cited by the page each sentence came from | [msa_news_2019_100K](https://downloads.wortschatz-leipzig.de/corpora/msa_news_2019_100K.tar.gz) |
+| `wiki:ms` | 97,505,005 |  | — |
+| `lz:msa-my_web_2013_1M` | 3,129,321 |  | — |
+| `ia` | 1,009,857 | Internet Archive Malay books — literature, and the register a newspaper never reaches | [archive-ms](https://archive.org/search?query=mediatype%3Atexts+AND+%28language%3A%22Malay%22+OR+language%3A%22may%22+OR+language%3A%22msa%22+OR+language%3A%22zsm%22%29) |
+| `lz:msa_newscrawl_2016_300K` | 443,046 |  | — |
+| `wikisource:ms` | 191,932 |  | — |
+| `ebible:zlmKSZI` | 152,053 |  | — |
+| `lz:msa_newscrawl_2011_100K` | 143,099 |  | — |
+| `web:kosmo.com.my` | 130,259 |  | fetched from `kosmo.com.my`, recorded in `searched.tsv` |
+| `lz:msa_news_2019_100K` | 88,062 |  | — |
 | `web:utusan.com.my` | 61,982 |  | fetched from `utusan.com.my`, recorded in `searched.tsv` |
-| `tat` | 51,517 | Tatoeba Standard Malay — contemporary and conversational, and small | [zsm_sentences.tsv](https://downloads.tatoeba.org/exports/per_language/zsm/zsm_sentences.tsv.bz2) |
-| `web:kosmo.com.my` | 24,620 |  | fetched from `kosmo.com.my`, recorded in `searched.tsv` |
-| `ia` | 0 | Internet Archive Malay books — literature, and the register a newspaper never reaches | [archive-ms](https://archive.org/search?query=mediatype%3Atexts+AND+%28language%3A%22Malay%22+OR+language%3A%22may%22+OR+language%3A%22msa%22+OR+language%3A%22zsm%22%29) |
+| `tat` | 51,517 |  | — |
+| `web:sinarharian.com.my` | 50,730 |  | fetched from `sinarharian.com.my`, recorded in `searched.tsv` |
+| `web:astroawani.com` | 31,076 |  | fetched from `astroawani.com`, recorded in `searched.tsv` |
+| `web:hmetro.com.my` | 2,284 |  | fetched from `hmetro.com.my`, recorded in `searched.tsv` |
 
 Totals are playable tokens after folding, not bytes. A collection missing from this table was
 never scanned; one present with no link was fetched by hand and its path is given instead.

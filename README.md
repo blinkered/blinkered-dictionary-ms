@@ -5,8 +5,8 @@ The Malay word list, and the evidence for every word in it.
 Built by [`blinkered-attestation`](https://github.com/blinkered/blinkered-attestation). The rule,
 the evidence format and the reasoning live there; what lives here is Malay.
 
-**3,727 of 7,921 candidates proved, 47.1%**, across 6 independent
-families, 5 of which a stranger could check by fetching.
+**5,048 of 7,921 candidates proved, 63.7%**, across 10 independent
+families, 9 of which a stranger could check by fetching.
 
 ## What is in this repository
 
@@ -40,11 +40,11 @@ where to get it again, which is what makes the downloads disposable.
 **The families.** Malay Wikipedia and Wikisource (one Wikimedia family), four Leipzig packages
 (2019 news, news crawls from 2011 and 2016, and the 2013 web crawl restricted to Malaysia, one
 family between them), Tatoeba, the Malaysian New Testament on eBible, and Malaysian publishers
-fetched directly (`utusan.com.my` and `kosmo.com.my` so far). The Internet Archive is read and
-contributes nothing, for the reason below.
+fetched directly (`utusan.com.my`, `kosmo.com.my`, `sinarharian.com.my`, `astroawani.com` and
+`hmetro.com.my`), and the Internet Archive's Malay shelf, once the Indonesian is set aside.
 
-**Indonesian is the same language, so no floor can catch it.** Of the shared words, 85% of this
-list is also in the Indonesian list, and the top of the list is identical in both (YANG, DAN, ITU,
+**Indonesian is the same language, so no floor can catch it.** 81.5% of this list is also in the
+Indonesian list, and the top of the list is identical in both (YANG, DAN, ITU,
 TIDAK). What distinguishes Malay are words like AKAUN, BASIKAL, ANTARABANGSA and BANDARAYA, and
 those are exactly the words an Indonesian source cannot attest. So every source leans Malaysian
 where there is a choice.
@@ -55,18 +55,20 @@ Indonesian (Hamka's _Tafsir al-Azhar_, Indonesian translations of al-Ghazali) an
 Palembang glossary. `sources.mjs` therefore reads a book as empty when five Indonesian spellings
 (KARENA, BISA, UANG, KANTOR, SAJA) outnumber their Malaysian counterparts (KERANA, BOLEH, WANG,
 PEJABAT, SAHAJA) by more than two to one, and leaves out anything named as a dictionary, kamus,
-vocabulary or glossary. With both rules in place the shelf attests nothing. Before them it was the
-strongest family after Wikipedia and Leipzig, which is the measure of how much Indonesian it was
-carrying.
+vocabulary or glossary. With both rules in place the first shelf attested nothing; before them it
+had been the strongest family after Wikipedia and Leipzig, which is the measure of how much
+Indonesian it was carrying. A second pass over the Archive, narrowed to items that mention
+Malaysia, Kuala or Melayu, found the Malaysian books: essays, _Hikayat Merong Mahawangsa_,
+Abdullah Munsyi, Malaysian religious writing. With 128 texts read it is a family again.
 
-**Where the drop list points.** 2,315 of the 2,352 words one family short are attested by
-Wikipedia and Leipzig and nothing else: ABADIKAN, ABAH. They need one more Malaysian voice, which
-is what the publisher harvest is for; it was still running when this was built, so a rebuild will
-reuse everything recorded here and add what it finds.
+**Where the drop list points.** The first build, before the Malaysian books and three of the five
+publishers, kept 47.1%; this one keeps 63.7%. 1,006 of the 1,209 words still one family short are
+attested by Wikipedia and Leipzig and nothing else: ABAKUS, ABALONE. They need one more Malaysian
+voice.
 
-**Tiles.** Q and X spell no shipped word. Each has a handful of candidates (QASIDAH, MUSAHAQAH;
-XENON, XILOFON, XENOFOBIA, XDE) and every one was dropped one or two families short, so this is
-thin evidence rather than a fold bug. 5.7% of the list is also in the English one, mostly loans
+**Tiles.** X spells no shipped word and Q spells one. X has four candidates (XENON, XILOFON,
+XENOFOBIA, XDE) and every one was dropped one or two families short, so this is thin evidence
+rather than a fold bug. 6.2% of the list is also in the English one, mostly loans
 (POLIS, UNIT, PROGRAM).
 
 ## Rebuilding
